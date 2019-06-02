@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+antiCSRF JS Function by Mohammad Atwi
+</title>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<h4>antiCSRF JS Function by Mohammad Atwi test</h4>
+<br>
+ <form action="server.php" method="post" id="form_1">
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  
+  <input type="submit" value="Submit">
+</form> 
+
+<br>
+<br>
+<br>
+<button>Send an HTTP POST request to a page and get the result back (AJAX)</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="anticsrf.js?t=h"></script>
+<script>
+antiCSRF({'token' : '123456'}); // default setup
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("server.php",{
+      name: "Donald Duck",
+      city: "Duckburg"
+    },function(data){
+    alert(data);
+    });
+  });
+});
+</script>
+</body>
+</html>
