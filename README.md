@@ -17,7 +17,7 @@ This will add a PARAMETER (token) = 123456 the target JQuery's selector (**#from
 
 ------------------------------------------------------------------------------------------------------
 
-**Note: By default, the plugin will add the token = value for all AJAX request in the request headers as KEY = VALUE, then you can deal with it on the server side. In PHP for example, you can get the list (array) of all request headers using: $headers = apache_request_headers();**
+**Note: by default, the plugin will add the token = value for all AJAX request in the request headers as KEY = VALUE, then you can deal with it on the server side. In PHP for example, you can get the list (array) of all request headers using: $headers = apache_request_headers();**
 
 ------------------------------------------------------------------------------------------------------
 
